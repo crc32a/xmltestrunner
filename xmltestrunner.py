@@ -22,7 +22,7 @@ class SomeOtherClass(unittest.TestCase):
     def test_this_should_also_pass(self):
         self.assertEqual(0,0)
 
-    def test_this_should_also_fail():
+    def test_this_should_also_fail(self):
         self.assertEqual("pids","fly")
 
 if __name__ == '__main__':
