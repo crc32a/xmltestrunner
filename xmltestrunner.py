@@ -23,7 +23,7 @@ class SomeOtherClass(unittest.TestCase):
         self.assertEqual(0,0)
 
     def test_this_should_also_fail(self):
-        self.assertEqual("pids","fly")
+        self.assertEqual("pigs","fly")
 
 if __name__ == '__main__':
     unittest.main(
