@@ -32,7 +32,7 @@ class SomeOtherClass(unittest.TestCase):
         self.assertEqual(True, True)
 
     def test_this_ones_pass_too(self):
-        self.asserTrue(True)
+        self.assertTrue(True)
 
 
 if __name__ == '__main__':
