@@ -4,26 +4,30 @@ import random
 import unittest
 import xmlrunner
 
-
+rnd = random.Random()
 
 class SomeTestsClass(unittest.TestCase):
-
     @unittest.skip("demonstrating skipping")
     def test_skipped(self):
         self.fail("shouldn't happen")
 
-    def test_should_pass(self):
+    def test_should_always_pass(self):
         self.assertTrue(True)
 
-    def test_should_fail(self):
-        self.assertFalse(True)
+    def test_should_fail_half_the_time(self):
+        self.assertFalse(rnd.choice([True,False]))
+
 
 class SomeOtherClass(unittest.TestCase):
     def test_this_should_also_pass(self):
         self.assertEqual(0,0)
 
-    def test_this_should_also_fail(self):
-        self.assertEqual("pigs","fly")
+    def test_this_should_pass(self):
+        self.assertEqual(True, True)
+
+    def test_this_ones_pass_too(self):
+        self.asserTrue(True)
+
 
 if __name__ == '__main__':
     unittest.main(
