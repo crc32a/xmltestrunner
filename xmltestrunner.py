@@ -12,10 +12,7 @@ class SomeTestsClass(unittest.TestCase):
         self.fail("shouldn't happen")
 
     def test_should_fail_one_in_eight(self):
-        if rnd.uniform(0,1.0) < 0.125:
-            test_failed = True
-        else:
-            test_failed = False
+        self.assertFalse( rnd.uniform(0,1.0) < 0.125 )
 
     def test_should_always_pass(self):
         self.assertTrue(True)
